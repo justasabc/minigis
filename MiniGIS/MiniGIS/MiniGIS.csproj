@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{601029F6-C99B-44A0-B3E4-FDE3A62C5A00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniGIS</RootNamespace>
+    <AssemblyName>MiniGIS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gdalconst_csharp, Version=1.0.3671.21225, Culture=neutral, PublicKeyToken=db5a52b08dc5b321">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.3671.21225, Culture=neutral, PublicKeyToken=db5a52b08dc5b321">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.12.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.3671.21225, Culture=neutral, PublicKeyToken=db5a52b08dc5b321">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.3671.21224, Culture=neutral, PublicKeyToken=db5a52b08dc5b321">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_Analysis\MG_Analysis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_Analysis\MG_BaseAnalysis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_MapSet.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_Constant.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_Feature.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_FeatureSet.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_Field.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_FieldDBType.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_FieldSet.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_Geometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_GeometryType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_Layer.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_LayerSet.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_LineString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_Map.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_MapExtent.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_MapView.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_MultiLineString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_MultiPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_MultiPolygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_Polygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_BasicObject\MG_Symbol.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_Value.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_ValueSet.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_ZoomHistory.cs" />
+    <Compile Include="package\MGP_BasicObject\MG_ZoomRecord.cs" />
+    <Compile Include="package\MGP_DataStorage\MGP_DatabaseStorage\MG_PostgreSQLDbOper.cs" />
+    <Compile Include="package\MGP_DataStorage\MGP_DatabaseStorage\MG_CommonDbOper.cs" />
+    <Compile Include="package\MGP_DataStorage\MGP_DatabaseStorage\MG_BaseDbOper.cs" />
+    <Compile Include="package\MGP_DataStorage\MGP_DatabaseStorage\MG_ConnectionString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_DataStorage\MGP_FileStorage\MG_RasterFileOper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_DataStorage\MGP_FileStorage\MG_ShapeFileOper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_Display\MG_BaseDisplay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_Display\MG_BaseRender.cs" />
+    <Compile Include="package\MGP_Display\MG_MapRender.cs" />
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgListTableNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgListTableNames.Designer.cs">
+      <DependentUpon>MG_DlgListTableNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewLayer.Designer.cs">
+      <DependentUpon>MG_DlgNewLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewMap.Designer.cs">
+      <DependentUpon>MG_DlgNewMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgNewField.Designer.cs">
+      <DependentUpon>MG_DlgNewField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgSetConnectionString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgSetConnectionString.Designer.cs">
+      <DependentUpon>MG_DlgSetConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Menu\MG_BaseMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolDrawLineString.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolDrawPolygon.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolDrawDoubleLineString.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolDrawRectangle.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_BaseTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolDrawPoint.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolPan.cs" />
+    <Compile Include="package\MGP_UI\MGP_Tool\MG_ToolType.cs" />
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgViewAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="package\MGP_UI\MGP_Dialog\MG_DlgViewAttribute.Designer.cs">
+      <DependentUpon>MG_DlgViewAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package\MGP_UI\MG_BaseUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgListTableNames.resx">
+      <DependentUpon>MG_DlgListTableNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgNewLayer.resx">
+      <DependentUpon>MG_DlgNewLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgNewMap.resx">
+      <DependentUpon>MG_DlgNewMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgNewField.resx">
+      <DependentUpon>MG_DlgNewField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgSetConnectionString.resx">
+      <DependentUpon>MG_DlgSetConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package\MGP_UI\MGP_Dialog\MG_DlgViewAttribute.resx">
+      <DependentUpon>MG_DlgViewAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="data\Continents\Continents.dbf" />
+    <None Include="data\Continents\Continents.prj" />
+    <None Include="data\Continents\Continents.sbn" />
+    <None Include="data\Continents\Continents.sbx" />
+    <None Include="data\Continents\Continents.shp" />
+    <None Include="data\Continents\Continents.shx" />
+    <None Include="data\Links\Links.dbf" />
+    <None Include="data\Links\Links.prj" />
+    <None Include="data\Links\Links.sbn" />
+    <None Include="data\Links\Links.sbx" />
+    <None Include="data\Links\Links.shp" />
+    <None Include="data\Links\Links.shx" />
+    <None Include="data\mjrroads\mjrroads.dbf" />
+    <None Include="data\mjrroads\mjrroads.prj" />
+    <None Include="data\mjrroads\mjrroads.sbn" />
+    <None Include="data\mjrroads\mjrroads.sbx" />
+    <None Include="data\mjrroads\mjrroads.shp" />
+    <None Include="data\mjrroads\mjrroads.shx" />
+    <None Include="data\shape\line.dbf" />
+    <None Include="data\shape\line.shp" />
+    <None Include="data\shape\line.shx" />
+    <None Include="data\shape\xxx.dbf" />
+    <None Include="data\shape\xxx.shp" />
+    <None Include="data\shape\xxx.shx" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.dbf" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.prj" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.sbn" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.sbx" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.shp" />
+    <None Include="data\USA_Major_Highways\usa_major_highways.shx" />
+    <None Include="data\USLakes\us_lakes.dbf" />
+    <None Include="data\USLakes\us_lakes.prj" />
+    <None Include="data\USLakes\us_lakes.shp" />
+    <None Include="data\USLakes\us_lakes.shx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="data\Continents\Continents.shp.xml" />
+    <Content Include="data\mjrroads\mjrroads.shp.xml" />
+    <Content Include="data\USA_Major_Highways\usa_major_highways.shp.xml" />
+    <Content Include="data\world.png" />
+    <Content Include="ToolPic\adddata32.png" />
+    <Content Include="ToolPic\addons32.png" />
+    <Content Include="ToolPic\bold16.png" />
+    <Content Include="ToolPic\borderbottom16.png" />
+    <Content Include="ToolPic\casing16.png" />
+    <Content Include="ToolPic\close32.png" />
+    <Content Include="ToolPic\color32.png" />
+    <Content Include="ToolPic\copy16.png" />
+    <Content Include="ToolPic\copyformat16.png" />
+    <Content Include="ToolPic\cut16.png" />
+    <Content Include="ToolPic\earth16.ico" />
+    <Content Include="ToolPic\earth32.png" />
+    <Content Include="ToolPic\edit32.png" />
+    <Content Include="ToolPic\eraseformat16.png" />
+    <Content Include="ToolPic\exit16.png" />
+    <Content Include="ToolPic\fill16.png" />
+    <Content Include="ToolPic\find32.png" />
+    <Content Include="ToolPic\fontcolor16.png" />
+    <Content Include="ToolPic\fontsizedecrease16.png" />
+    <Content Include="ToolPic\fontsizeincrease16.png" />
+    <Content Include="ToolPic\FullExtent32.png" />
+    <Content Include="ToolPic\goto16.png" />
+    <Content Include="ToolPic\hilight16.png" />
+    <Content Include="ToolPic\indentdecrease16.png" />
+    <Content Include="ToolPic\indentdecrease161.png" />
+    <Content Include="ToolPic\indentincrease16.png" />
+    <Content Include="ToolPic\invisiblechars16.png" />
+    <Content Include="ToolPic\italic16.png" />
+    <Content Include="ToolPic\minigis32.ico" />
+    <Content Include="ToolPic\multilevellist16.png" />
+    <Content Include="ToolPic\newdocument32.png" />
+    <Content Include="ToolPic\open16.png" />
+    <Content Include="ToolPic\open32.png" />
+    <Content Include="ToolPic\options16.png" />
+    <Content Include="ToolPic\orderedlist16.png" />
+    <Content Include="ToolPic\pageblank16.png" />
+    <Content Include="ToolPic\pan.png" />
+    <Content Include="ToolPic\pan32.png" />
+    <Content Include="ToolPic\paragraphspacing16.png" />
+    <Content Include="ToolPic\paste16.png" />
+    <Content Include="ToolPic\paste32.png" />
+    <Content Include="ToolPic\paste321.png" />
+    <Content Include="ToolPic\pastelink16.png" />
+    <Content Include="ToolPic\pastespecial16.png" />
+    <Content Include="ToolPic\prepare32.png" />
+    <Content Include="ToolPic\print32.png" />
+    <Content Include="ToolPic\print321.png" />
+    <Content Include="ToolPic\printpreview32.png" />
+    <Content Include="ToolPic\printquick16.png" />
+    <Content Include="ToolPic\printquick32.png" />
+    <Content Include="ToolPic\publish32.png" />
+    <Content Include="ToolPic\redo32.png" />
+    <Content Include="ToolPic\Remove32.png" />
+    <Content Include="ToolPic\replace16.png" />
+    <Content Include="ToolPic\save16.png" />
+    <Content Include="ToolPic\save32.png" />
+    <Content Include="ToolPic\saveas32.png" />
+    <Content Include="ToolPic\saveas321.png" />
+    <Content Include="ToolPic\select16.png" />
+    <Content Include="ToolPic\send32.png" />
+    <Content Include="ToolPic\sort16.png" />
+    <Content Include="ToolPic\strikethru16.png" />
+    <Content Include="ToolPic\style16.png" />
+    <Content Include="ToolPic\style32.png" />
+    <Content Include="ToolPic\stylechange32.png" />
+    <Content Include="ToolPic\styleset16.png" />
+    <Content Include="ToolPic\subindex16.png" />
+    <Content Include="ToolPic\superindex16.png" />
+    <Content Include="ToolPic\textaligncenter16.png" />
+    <Content Include="ToolPic\textalignjustify16.png" />
+    <Content Include="ToolPic\textalignleft16.png" />
+    <Content Include="ToolPic\textalignright16.png" />
+    <Content Include="ToolPic\themefont.png" />
+    <Content Include="ToolPic\underline16.png" />
+    <Content Include="ToolPic\undo16.png" />
+    <Content Include="ToolPic\undo32.png" />
+    <Content Include="ToolPic\unorderedlist16.png" />
+    <Content Include="ToolPic\word2003doc32.png" />
+    <Content Include="ToolPic\worddocument32.png" />
+    <Content Include="ToolPic\wordtemplate32.png" />
+    <Content Include="ToolPic\zoomoin32.png" />
+    <Content Include="ToolPic\zoomout32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
