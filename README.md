@@ -25,7 +25,7 @@ on Android
 
 [OpenSimulator](http://opensimulator.org/wiki/Main_Page) 
 
-  OpenSimulator is an open source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, on multiple protocols. It also has an optional facility (the Hypergrid) to allow users to visit other OpenSimulator installations across the web from an account on a 'home' OpenSimulator installation.
+	OpenSimulator is an open source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, on multiple protocols. It also has an optional facility (the Hypergrid) to allow users to visit other OpenSimulator installations across the web from an account on a 'home' OpenSimulator installation.
 
 # Client
 
